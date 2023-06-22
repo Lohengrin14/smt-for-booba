@@ -1,0 +1,68 @@
+@keyframes color {
+    0%   { background: #33CCCC; }
+    20%  { background: #33CC36; }
+    40%  { background: #B8CC33; }
+    60%  { background: #FCCA00; }
+    80%  { background: #33CC36; }
+    100% { background: #33CCCC; }
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    background-image: url('./assets/photo_2023-06-22_21-22-00.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.main {
+    width: 400px;
+    height: 450px;
+    background: #33CCCC; /* Fallback */
+    animation: color 9s infinite linear;
+    border-radius: 20px;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.output_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.main_input {
+    width: 350px;
+    height: 2em;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+.main_output {
+    width: 350px;
+    height: 300px;
+    font-size: 20px;
+    border-radius: 6px;
+}
