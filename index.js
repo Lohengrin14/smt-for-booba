@@ -1,6 +1,6 @@
 const mainInput = document.querySelector('.main_input')
-const namesOutput = document.querySelector('.names_output')
-const timesOutput = document.querySelector('.times_output')
+const namesOutput = document.querySelector('#names')
+const timesOutput = document.querySelector('#times')
 
 function tranformData(inputData) {
     const sigleDividedData = inputData.replaceAll('  ', '')
