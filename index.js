@@ -1,11 +1,14 @@
 const mainInput = document.querySelector('.main_input')
-const mainOutput = document.querySelector('.main_output')
+const namesOutput = document.querySelector('.names_output')
+const timesOutput = document.querySelector('.times_output')
 
 function tranformData(inputData) {
     const sigleDividedData = inputData.replaceAll('  ', '')
     // now lets make an Array ['name', 'surname', 'date1', date2', 'name'...]
     const dataArray = sigleDividedData.split(' ')
     const resultArray = [];
+    const namesArray = [];
+    const timesArray = [];
 
     function tranformTime(fristTime, secondTime) {
         const HOURS = 'h'
@@ -60,11 +63,13 @@ function tranformData(inputData) {
     for(let i = 0; i < dataArray.length; i = i + 4) {
         resultArray[j] = `${dataArray[i]} ${dataArray[i + 1]}`
         resultArray[j + 1] = `${tranformTime(dataArray[i + 2], dataArray[i + 3])}`
+        namesArray[j] = `${dataArray[i]} ${dataArray[i + 1]}`
+        timesArray[j] = `${tranformTime(dataArray[i + 2], dataArray[i + 3])}`
         j += 2;
     }
     console.log(resultArray)
-    mainOutput.value = resultArray.join('\n')
-
+    namesOutput.value = namesArray.join('\n')
+    timesOutput.value = timesArray.join('\n')
 
 
 }
